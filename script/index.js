@@ -43,6 +43,7 @@ function getCookie(cname) {
 }
 
 function load(id,path){
+  path = 'http://tongog.xyz/'+path;
   $(function(){
       $(id).load(path)
   })
