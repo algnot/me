@@ -115,6 +115,7 @@ if(getCookie('mode')=='light'){
   changMode();
 }
 
+load('#root','link/home.html');
 if(getCookie('page')==''){
   setCookie('page','1',365);
 }
