@@ -2,7 +2,7 @@ body{
     background-color: #000000;
 }
 
-.link{
+.link{ 
     color: #D9D9D9;
 }
 
@@ -139,6 +139,8 @@ body{
 .like div:hover{
     color: #FF5733;
 }
+
+/* this is home.html stylesheets */
 
 
 
