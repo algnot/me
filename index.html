@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">algnot | home</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link href="asset/fontawesome-free/css/all.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="asset/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mood.css">
+    <span id="mode"><link rel="stylesheet" href="css/darkMode.css"></span>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="asset/jquery/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container1">
+
+        <div class="navigation">
+            <div class="logo" id="logo"><img src="img/logo_white.png" width="100" alt="logo"></div>
+    
+            <div id="1" class="link active" onclick="load('#root','link/home.html'); active('1');">
+                <i class="fas fa-house-damage" data-toggle="tooltip" data-placement="right" title="Home"></i> <span id="text-link"> &nbsp;&nbsp; Home</span>
+            </div>
+    
+            <div id="2" class="link" onclick="load('#root','link/profile.html'); active('2');">
+                <i class="fas fa-user-alt" data-toggle="tooltip" data-placement="right" title="Profile"></i> <span id="text-link">&nbsp;&nbsp; Profile</span>
+            </div>
+    
+            <div id="3" class="link" onclick="load('#root','link/education.html'); active('3');">
+                <i class="fas fa-graduation-cap" data-toggle="tooltip" data-placement="right" title="Education"></i> <span id="text-link">&nbsp;&nbsp;Education</span>
+            </div>
+    
+            <div id="4" class="link" onclick="load('#root','link/contact.html'); active('4');">
+                <i class="fas fa-id-card-alt" data-toggle="tooltip" data-placement="right" title="Contact"></i> <span id="text-link">&nbsp;&nbsp; Contact</span>
+            </div>
+    
+            <div id="5" class="link" onclick="load('#root','link/artical.html'); active('5');">
+                <i class="fas fa-newspaper" data-toggle="tooltip" data-placement="right" title="Article"></i> <span id="text-link">&nbsp;&nbsp; Article</span>
+            </div>
+
+            <div class="link ghost" onclick="changModeMini()">
+                <i class="fas fa-ghost" data-toggle="tooltip" data-placement="right" title="Article"></i>
+            </div>
+
+            <div class="mood">
+                <div class="icon-mood" id="ghost" data-toggle="tooltip" data-placement="right" title="click switch for chang mode display"><i class="fas fa-ghost"></i></div>
+                <input type="checkbox" name="checkbox" class="switch" id="switch" onclick="changMode()">
+            </div>
+            
+            <div class="nav-text" id="text-link">Click switch for chang mode display</div>
+            
+            <div class="profile">
+                <center><img src="img/profile.jpg" alt="tongla"></center>
+                <div class="nav-profile-text">
+                   <span class="nav-text" id="text-link">algnot</span><br>
+                   <span class="text-muted" id="text-link">@62010371ITE</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="root"></div>
+
+        <div class="show-img" id="show-img">
+            <div class="icon-show"><i class="fas fa-times" onclick="document.getElementById('show-img').style.display='none'"></i></div>
+            <div class="img-show" id="img-show"><img src="img/profile.jpg"></div>
+        </div>
+
+        <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out" data-abc="true"></a>
+
+    </div>
+
+    <script src="asset/bootstrap/js/bootstrap.min.js"></script>
+    <script src="script/index.js"></script>
+</body>
+</html>

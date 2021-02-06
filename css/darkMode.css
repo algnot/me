@@ -1,0 +1,145 @@
+body{
+    background-color: #000000;
+}
+
+.link{
+    color: #D9D9D9;
+}
+
+.navigation{
+    border-right: 1px solid #616264;
+}
+
+.icon-mood{
+    color: #E69C1C;
+}
+
+.nav-text{
+    color: #D9D9D9;
+}
+
+.active{
+    color: #E69C1C;
+}
+
+.link:hover{
+    color: #E69C1C;
+    background-color: rgba(230, 156, 28,0.1);
+}
+
+.active:hover{
+    background-color: rgba(230, 156, 28,0);
+}
+
+.profile:hover{
+    background-color: rgba(230, 156, 28,0.1);
+}
+
+/* this is profile.html stylesheets */
+.head{
+    border-right: 1px solid #616264;
+    border-bottom: 1px solid #616264;
+}
+
+.name{
+    color: #D9D9D9;
+}
+
+.icon .fas{
+    color: #E69C1C;
+}
+
+.icon .fas:hover{
+    background: rgba(230, 156, 28,0.1);
+}
+
+.cover{
+    border-right: 1px solid #616264;
+}
+
+.back-drop{
+    background: rgba(0,0,0,0.3);
+}
+
+.profile-img img{
+    border: 4px solid #000000;
+}
+
+.information-profile{
+    border-right: 1px solid #616264;
+}
+
+.contact a{
+    color: #E69C1C;
+}
+
+.contact a:hover{
+    color: #D9D9D9;
+}
+
+.email{
+    color: #E69C1C;
+    border: 2px solid #E69C1C;
+}
+
+.email:hover{
+    color: #000000;
+    background-color: #E69C1C;
+    border: 2px solid #E69C1C;
+}
+
+.information-name{
+    color: #D9D9D9;
+}
+
+.navigation-profile{
+    border-bottom: 1px solid #616264;
+    border-right: 1px solid #616264;
+}
+
+.profile-link{
+    color: #57737D;
+}
+
+.profile-link-active{
+    color: #E69C1C;
+    border-bottom: 2px solid #E69C1C;
+}
+
+.profile-link:hover{
+    color: #E69C1C;
+    background: rgba(230, 156, 28,0.1);
+}
+
+.information-name{
+    border-right: 1px solid #616264;
+}
+
+.post{
+    border-right: 1px solid #616264;
+    border-bottom: 1px solid #616264;
+}
+
+.post-name{
+    color: #D9D9D9;
+}
+
+.post-info{
+    color: #D9D9D9;
+}
+
+.like{
+    color: #6C757D;
+}
+
+.like div{
+    color: #6C757D;
+}
+
+.like div:hover{
+    color: #FF5733;
+}
+
+
+
+

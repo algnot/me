@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    transition: all .3s ease;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+} 
+
+.container1{
+    padding: 0 200px;
+}
+
+.navigation{
+    height: 100vh;
+    width: 220px;
+    position: fixed;
+}
+
+#root{
+    margin-left: 220px;
+}
+
+.logo{
+    padding-top: 35px;
+    margin-bottom: 15px;
+}
+
+.link {
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.link .fas{
+    font-size: 25px;
+    padding: 20px 0;
+}
+
+.icon-mood{
+    font-size: 29px;
+    display: flex;
+    align-items: center;
+}
+
+.mood{
+    display: grid;
+    grid-template-columns: 10px 1fr;
+    margin-top: 20px;
+}
+
+.profile{
+    display: grid;
+    grid-template-columns: 65px 1fr;
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.profile img{
+    width: 45px;
+    border-radius: 100%;
+}
+
+.link:hover{
+    border-radius: 20px;
+    padding-left: 20px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.active{
+    cursor: context-menu; 
+}
+
+.active:hover{
+    margin: 0;
+    padding: 0;
+    background-color: rgba(230, 156, 28,0);
+    cursor: context-menu; 
+}
+
+#ghost{
+    animation: ghost 3s ease 0s infinite normal none;
+}
+
+.show-img{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+    background: rgba(134, 36, 6, 0.7);
+}
+
+.icon-show .fas{
+    padding: 10px;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 25px;
+    border-radius: 100%;
+    margin: 20px;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-show .fas:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.img-show img{
+    width: 50vw;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+@keyframes ghost {
+    0.0%{
+        transform: translate(0,0px);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+    49.8%{
+        transform: translate(0,-20px);
+    }
+}
+
+/* this is profile.html stylesheets */
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon .fas{
+    padding: 7px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.head{
+    display: grid;
+    padding: 5px 0;
+    grid-template-columns: 60px 1fr;
+}
+
+.cover{
+    height: 200px;
+    background-image: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.back-drop{
+    height: 200px;
+}
+
+.profile-img img{
+    cursor: pointer;
+    margin-left: 15px;
+    margin-top: -75px;
+    height:150px;
+    border-radius: 100%;
+}
+
+.information-profile{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact{
+    display: flex;
+    align-items: center;
+    float: center;
+}
+
+.contact a{
+    font-size: 30px;
+    margin-right: 16px;
+}
+
+.email{
+    margin-left: 10px;
+    border-radius: 30px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#email{
+    font-size: 25px;
+    display: none;
+}
+
+.information-name{
+    padding: 15px 25px 0px 25px;
+}
+
+.information-name .name{
+    font-size: 20px;
+}
+
+.navigation-profile{
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+}
+
+.profile-link{
+    padding: 15px 0;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.profile-link-active{
+    padding: 15px 0;
+    font-weight: 700;
+}
+
+.img-post img{
+    border-radius: 100%;
+}
+
+.post{
+    padding: 20px 20px 0 20px;
+}
+
+.information-post{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 70px 1fr;
+}
+
+.post-name{
+    font-weight: 500;
+}
+
+.post-info-img{
+    margin-top: 10px;
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.img-post{
+    border-radius: 20px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+#spac{
+    display: none;
+}
+
+.post-info{
+    text-align: justify;
+    margin-top: 15px;
+    padding: 5px;
+}
+
+.like{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.like div{
+    cursor: pointer;
+}
+
+.ghost{
+    display: none;
+}
+
+@media only screen and (max-width: 1200px){
+    .container1{
+        padding: 0 100px;
+    }
+}
+
+@media only screen and (max-width: 950px){
+    .container1{
+        padding: 0 20px;
+    }
+
+    #email{
+        display: block;
+    }
+
+    .email{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .container1{
+        padding: 0;
+    }
+
+    #text-link{
+        font-size: 0px;
+    }
+
+    .switch{
+        display: none;
+    }
+
+    .navigation{
+        width: 60px;
+    } 
+
+    #root{
+        margin-left: 60px;
+    }
+
+    .logo{
+        display: none;
+        text-align: center;
+    }
+
+    .link{
+        text-align: center;
+    }
+
+    .mood{
+        display: none;
+    }
+
+    .link:hover{
+        border-radius: 0px;
+        padding-left: 0px;
+        margin-right: 0px;
+        cursor: pointer;
+    }
+
+    .profile img{
+        width: 35px;
+    } 
+
+    .profile{
+        padding: 0px;
+        left: 0;
+    }
+
+    .profile:hover{
+        background-color: rgba(230, 75, 28, 0);
+    }
+
+    .profile-img img{
+        margin-left: 15px;
+        margin-top: -60px;
+        height:120px;
+        border-radius: 100%;
+    }
+
+    .contact a{
+        font-size: 30px;
+        margin-right: 10px;
+    }
+
+    #spac{
+        display: block;
+    }
+
+    .information-name{
+        padding-left: 15px;
+        margin: 0;
+    }
+
+    .post{
+        padding: 10px;
+    }
+
+    .post-text{
+        font-size: 15px;
+    }
+
+    .post-info{
+        margin-top: 10px;
+        padding: 0px;
+        font-size: 15px;
+    }
+
+    .ghost{
+        display: block;
+    }
+
+    .img-show img{
+        width: 90vw;
+    }
+}
