@@ -43,7 +43,7 @@ function getCookie(cname) {
 }
 
 function load(id,path){
-  // path = 'https://raw.githubusercontent.com/algnot/web-tech/main/'+path;
+  path = 'https://raw.githubusercontent.com/algnot/web-tech/main/'+path;
   $(function(){
       $(id).load(path)
   })
