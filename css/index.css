@@ -453,4 +453,8 @@
     .img-show img{
         width: 90vw;
     }
+
+    .chat{
+        display: none;
+    }
 }
