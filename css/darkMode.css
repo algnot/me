@@ -41,6 +41,11 @@ body{
     border-bottom: 1px solid #616264;
 }
 
+.head-home{
+    border-right: 1px solid #616264;
+    border-bottom: 1px solid #616264;
+}
+
 .name{
     color: #D9D9D9;
 }
@@ -137,7 +142,7 @@ body{
 }
 
 .like div:hover{
-    color: #FF5733;
+    color: #E69C1C;
 }
 
 .chat{
@@ -153,13 +158,59 @@ body{
 }
 
 .chat-top-icon{
-    color: #FF5733;
+    color: #E69C1C;
 }
 
 .chat-bottom-card{
     border-bottom: 1px solid #616264;
 }
 
+.heag-home-topic{
+    color: #E69C1C;
+}
 
+.home-head {
+    color: #D9D9D9;
+}
 
+.container-home{
+    border-right: 1px solid #616264;
+    border-bottom: 1px solid #616264;
+}
+
+.code{
+    background: #161B22; 
+}
+
+.let{
+    color: #d73a49;
+}
+
+.sf{
+    color: #005cc5;
+}
+
+.variable{
+    color: #7f7f88;
+}
+
+.value{
+    color: #D9D9D9;
+}
+
+.home-pinned{
+    border-right: 1px solid #616264;
+}
+
+.home-link{
+    color: #0366d6;
+}
+
+.home-grid{
+    border:1px solid #616264;
+}
+
+.home-container-grid{
+    border-bottom: 1px solid #616264;
+}
 

@@ -158,6 +158,12 @@
     grid-template-columns: 60px 1fr;
 }
 
+.head-home{
+    display: grid;
+    padding: 5px 0;
+    grid-template-columns: 60px 1fr;
+}
+
 .cover{
     height: 200px;
     background-image: url('../img/background.jpg');
@@ -330,11 +336,71 @@
     width: 40px;
 }
 
+.heag-home-topic{
+    padding: 5px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
 .chat-bottom-card{
     display: grid;
     padding: 10px;
     grid-template-columns: 50px 1fr;
     font-size: 15px;
+}
+
+.home-head {
+    font-size: 14px;
+    padding: 20px;
+}
+
+.home-head .fas{
+    font-size: 15px;
+}
+
+.head-info-home{
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.code{
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+.head-info-home a{
+    text-decoration: none;
+}
+
+.home-link:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.home-container-grid{
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    padding-bottom: 30px;
+}
+
+@media only screen and (max-width: 1300px){
+    .home-container-grid{
+        padding: 0 10px;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .home-container-grid{
+        padding: 0 10px;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
 }
 
 @media only screen and (max-width: 1200px){
@@ -457,5 +523,22 @@
     .chat{
         display: none;
         height: 0px;
+    }
+
+    .code{
+        margin-top: 20px;
+        padding: 5px;
+        border-radius: 10px;
+        font-size: 12px;
+    }
+
+    .home-container-grid{
+        padding: 0 10px;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .home-grid{
+        font-size: 15px;
     }
 }

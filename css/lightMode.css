@@ -41,6 +41,11 @@ body{
     border-bottom: 1px solid #7f7f88;
 }
 
+.head-home{
+    border-right: 1px solid #7f7f88;
+    border-bottom: 1px solid #7f7f88;
+}
+
 .name{
     color: #0F1419;
 }
@@ -153,5 +158,54 @@ body{
 }
 
 .chat-bottom-card{
+    border-bottom: 1px solid #7f7f88;
+}
+
+.heag-home-topic{
+    color: #FF5733;
+}
+
+.home-head {
+    color: #0F1419;
+}
+
+.container-home{
+    border-right: 1px solid #7f7f88;
+    border-bottom: 1px solid #7f7f88;
+}
+
+.code{
+    background: #F6F8FA; 
+}
+
+.let{
+    color: #d73a49;
+}
+
+.sf{
+    color: #005cc5;
+}
+
+.variable{
+    color: #7f7f88;
+}
+
+.value{
+    color: #032f62;
+}
+
+.home-pinned{
+    border-right: 1px solid #7f7f88;
+}
+
+.home-link{
+    color: #0366d6;
+}
+
+.home-grid{
+    border:1px solid #7f7f88;
+}
+
+.home-container-grid{
     border-bottom: 1px solid #7f7f88;
 }
