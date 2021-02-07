@@ -456,5 +456,6 @@
 
     .chat{
         display: none;
+        height: 0px;
     }
 }
