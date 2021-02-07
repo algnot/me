@@ -131,9 +131,27 @@ body{
 .like div{
     color: #6C757D;
 }
-
+ 
 .like div:hover{
     color: #FF5733;
 }
 
-/* this is home.html stylesheets */
+.chat{
+    background-color:#ffffff;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+    color: #0F1419;
+}
+
+.chat-top-icon{
+    color: #FF5733;
+}
+
+.chat-top{
+    border-bottom: 1px solid #7f7f88;
+}
+
+.chat-bottom-card{
+    border-bottom: 1px solid #7f7f88;
+}

@@ -84,6 +84,19 @@ function active(key){
   }
 }
 
+var chat = 0; //0->not show  |||| 1->show
+function showChat(){
+  if(chat==0){
+    document.getElementById('chat').style.height = '300px';
+    document.getElementById('icon-chat').innerHTML = '<i class="fas fa-chevron-down" onclick="showChat()"></i>';
+    chat=1;
+  } else {
+    document.getElementById('chat').style.height = '0px';
+    document.getElementById('icon-chat').innerHTML = '<i class="fas fa-chevron-up" onclick="showChat()"></i>';
+    chat=0;
+  }
+}
+
 $(document).ready(function() {
   $(window).scroll(function() {
     if ($(this).scrollTop() > 20) {
@@ -100,6 +113,11 @@ $(document).ready(function() {
       return false;
   });
 });
+
+var d = new Date();
+document.getElementById("date").innerHTML += d.getDate()+"/"+(d.getMonth()+1)+"/"+d.getFullYear();
+document.getElementById("date2").innerHTML += d.getDate()+"/"+(d.getMonth()+1)+"/"+d.getFullYear();
+document.getElementById("date3").innerHTML += d.getDate()+"/"+(d.getMonth()+1)+"/"+d.getFullYear();
 
 if(getCookie('mode')==''){
   setCookie('mode','dark',365);

@@ -140,7 +140,25 @@ body{
     color: #FF5733;
 }
 
-/* this is home.html stylesheets */
+.chat{
+    background-color:#000000 ;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(255,255,255,0.2);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(255,255,255,0.2);
+    box-shadow: 0px 0px 20px 0px rgba(255,255,255,0.2);
+    color: #D9D9D9;
+}
+
+.chat-top{
+    border-bottom: 1px solid #616264;
+}
+
+.chat-top-icon{
+    color: #FF5733;
+}
+
+.chat-bottom-card{
+    border-bottom: 1px solid #616264;
+}
 
 
 
