@@ -1,5 +1,5 @@
 body{
-    background-color: #000000;
+    background-color: #15202B;
 }
 
 .link{ 
@@ -67,7 +67,7 @@ body{
 }
 
 .profile-img img{
-    border: 4px solid #000000;
+    border: 4px solid #15202B;
 }
 
 .information-profile{
@@ -88,7 +88,7 @@ body{
 }
 
 .email:hover{
-    color: #000000;
+    color: #15202B;
     background-color: #E69C1C;
     border: 2px solid #E69C1C;
 }
@@ -146,7 +146,7 @@ body{
 }
 
 .chat{
-    background-color:#000000 ;
+    background-color:#15202B ;
     -webkit-box-shadow: 0px 0px 20px 0px rgba(255,255,255,0.2);
     -moz-box-shadow: 0px 0px 20px 0px rgba(255,255,255,0.2);
     box-shadow: 0px 0px 20px 0px rgba(255,255,255,0.2);
