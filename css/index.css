@@ -387,6 +387,11 @@
     padding-bottom: 30px;
 }
 
+.home-grid{
+    border-radius: 20px;
+    padding: 10px;
+}
+
 @media only screen and (max-width: 1300px){
     .home-container-grid{
         padding: 0 10px;
