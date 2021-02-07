@@ -5,11 +5,11 @@ function changMode(){
     document.getElementById('logo').innerHTML = '<img src="img/logo_black.png" width="100" alt="logo">';
   } else {
     setCookie('mode','dark',365);
-    document.getElementById('mode').innerHTML = '<link rel="stylesheet" href="css/darkMode.css">';
+    document.getElementById('mode').innerHTML = '<link rel="stylesheet" href="css/darkMode.css?ver=4">';
     document.getElementById('logo').innerHTML = '<img src="img/logo_white.png" width="100" alt="logo">';
   }
 }
-
+      
 function changModeMini(){
   if(document.getElementById('switch').checked){
     document.getElementById('switch').checked = false;
@@ -43,7 +43,7 @@ function getCookie(cname) {
 }
 
 function load(id,path){
-  path = 'https://raw.githubusercontent.com/algnot/web-tech/main/'+path;
+  // path = 'https://raw.githubusercontent.com/algnot/web-tech/main/'+path;
   $(function(){
       $(id).load(path)
   })
