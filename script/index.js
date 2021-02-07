@@ -162,10 +162,3 @@ if(getCookie('page')=='5'){
   load('#root','link/artical.html');
   active('5');
 }
-
-var typed = new Typed('#name', {
-  strings: ['^500Tongla^1000', '^500 Thanawat Talabtong^1000','^500Information Engeneer^1000','^algnot^1000'],
-  loop: true,
-  loopCount: Infinity,
-  startDelay: 500,
-});
