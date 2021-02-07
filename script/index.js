@@ -43,7 +43,7 @@ function getCookie(cname) {
 }
 
 function load(id,path){
-  // path = 'https://raw.githubusercontent.com/algnot/web-tech/main/'+path;
+  path = 'https://raw.githubusercontent.com/algnot/web-tech/main/'+path;
   $(function(){
       $(id).load(path)
   })
@@ -120,7 +120,7 @@ document.getElementById("date2").innerHTML += d.getDate()+"/"+(d.getMonth()+1)+"
 document.getElementById("date3").innerHTML += d.getDate()+"/"+(d.getMonth()+1)+"/"+d.getFullYear();
 
 if(getCookie('mode')==''){
-  setCookie('mode','dark',365);
+  setCookie('mode','light',365);
 }  
 
 if(getCookie('mode')=='dark'){
