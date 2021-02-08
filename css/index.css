@@ -392,6 +392,13 @@
     padding: 10px;
 }
 
+.read-more{
+    color: #0366d6;
+    cursor: pointer;
+}
+
+
+
 @media only screen and (max-width: 1300px){
     .home-container-grid{
         padding: 0 10px;
@@ -467,7 +474,7 @@
         padding-left: 0px;
         margin-right: 0px;
         cursor: pointer;
-    }
+    }  
 
     .profile img{
         width: 35px;
