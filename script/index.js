@@ -68,7 +68,7 @@ function active(key){
   switch(key) {
     case '1':
       document.getElementById('title').innerHTML = 'algnot | Home';
-      resetTime();
+      var event = setTimeout(resetTime,500);
       break;
     case '2':
       document.getElementById('title').innerHTML = 'algnot | Profile';
@@ -164,7 +164,7 @@ if(getCookie('page')=='5'){
   active('5');
 }
 
-var event = setTimeout(resetTime,1000);
+var event = setTimeout(resetTime,500);
 
 var date = new Date();
 var day = ['Sunday' , 'Monday' , 'Tuesday' , 'Wednesday' , 'Thursday' , 'Friday' ,'Saturday']
@@ -184,9 +184,16 @@ if(hours>0 && hours<12){
 }
 
 function resetTime(){
-    var date = new Date();
-    document.getElementById("day").innerHTML = date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear();
-    document.getElementById("7-day").innerHTML = day[date.getDay()];
-    document.getElementById("time").innerHTML = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();    
-    event = setTimeout(resetTime,1000); 
+  var date = new Date();
+  document.getElementById("day").innerHTML = date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear();
+  document.getElementById("7-day").innerHTML = day[date.getDay()];
+  document.getElementById("time").innerHTML = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();   
+  if(hours>1 && hours<13){
+    document.getElementById("hello").innerHTML = 'Good morning. 🌞';
+  }else if(hours>13 && hours<19){
+    document.getElementById("hello").innerHTML = 'Good afternoon. ⛅';
+  } else {
+    document.getElementById("hello").innerHTML = 'Good evening. 🌙';
+  } 
+  event = setTimeout(resetTime,1000); 
 }
