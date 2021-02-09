@@ -68,6 +68,7 @@ function active(key){
   switch(key) {
     case '1':
       document.getElementById('title').innerHTML = 'algnot | Home';
+      resetTime();
       break;
     case '2':
       document.getElementById('title').innerHTML = 'algnot | Profile';
