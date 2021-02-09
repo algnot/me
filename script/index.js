@@ -165,24 +165,27 @@ if(getCookie('page')=='5'){
 
 var event = setTimeout(resetTime,1000);
 
+var date = new Date();
+var day = ['Sunday' , 'Monday' , 'Tuesday' , 'Wednesday' , 'Thursday' , 'Friday' ,'Saturday']
+
+document.getElementById("day").innerHTML = date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear();
+document.getElementById("7-day").innerHTML = day[date.getDay()];
+document.getElementById("time").innerHTML = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+  
+var hours = date.getHours();
+
+if(hours>0 && hours<12){
+    document.getElementById("hello").innerHTML = 'Good morning. 🌞';
+}else if(hours>12 && hours<18){
+    document.getElementById("hello").innerHTML = 'Good afternoon. ⛅';
+} else {
+    document.getElementById("hello").innerHTML = 'Good evening. 🌙';
+}
+
+function resetTime(){
     var date = new Date();
-    var day = ['Sunday' , 'Monday' , 'Tuesday' , 'Wednesday' , 'Thursday' , 'Friday' ,'Saturday']
     document.getElementById("day").innerHTML = date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear();
     document.getElementById("7-day").innerHTML = day[date.getDay()];
-    document.getElementById("time").innerHTML = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
-    var hours = date.getHours();
-    if(hours>0 && hours<12){
-        document.getElementById("hello").innerHTML = 'Good morning. 🌞';
-    }else if(hours>12 && hours<18){
-        document.getElementById("hello").innerHTML = 'Good afternoon. ⛅';
-    } else {
-        document.getElementById("hello").innerHTML = 'Good evening. 🌙';
-    }
-
-    function resetTime(){
-        var date = new Date();
-        document.getElementById("day").innerHTML = date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear();
-        document.getElementById("7-day").innerHTML = day[date.getDay()];
-        document.getElementById("time").innerHTML = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();    
-        event = setTimeout(resetTime,1000); 
-    }
+    document.getElementById("time").innerHTML = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();    
+    event = setTimeout(resetTime,1000); 
+}

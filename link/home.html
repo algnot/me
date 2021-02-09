@@ -76,9 +76,12 @@
         startDelay: 500,
     });
 
-    var event = setTimeout(resetTime,1000);
+    var date1 = new Date();
+    var day = ['Sunday' , 'Monday' , 'Tuesday' , 'Wednesday' , 'Thursday' , 'Friday' ,'Saturday']
 
-    var date = new Date();
+    document.getElementById("day").innerHTML = date1.getDate()+"/"+(date1.getMonth()+1)+"/"+date1.getFullYear();
+    document.getElementById("7-day").innerHTML = day[date1.getDay()];
+    document.getElementById("time").innerHTML = date1.getHours()+":"+date1.getMinutes()+":"+date1.getSeconds();
     // var day = ['Sunday' , 'Monday' , 'Tuesday' , 'Wednesday' , 'Thursday' , 'Friday' ,'Saturday']
     // document.getElementById("day").innerHTML = date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear();
     // document.getElementById("7-day").innerHTML = day[date.getDay()];
