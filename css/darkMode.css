@@ -192,7 +192,7 @@ body{
 
 .variable{
     color: #7f7f88;
-}
+} 
 
 .value{
     color: #D9D9D9;
@@ -212,5 +212,9 @@ body{
 
 .home-container-grid{
     border-bottom: 1px solid #616264;
+}
+
+.hello{
+    color: #E69C1C; 
 }
 

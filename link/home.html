@@ -9,6 +9,10 @@
         <i class="fas fa-paw"></i> algnot/README.md <br>
 
         <div class="head-info-home">
+            <span class="hello">
+                Hello' <span id="7-day">Monday</span>. <span id="hello"></span><br>
+                <span id="day">xx/xx/xxxx</span> <span id="time">xx:xx:xxxx</span><br> <br>
+            </span>
             <b>Hi there I'm <span id="name">algnot</span> 👋</b> <br>
             "My name is TG. I come from KMITL Thailand ⚡" - TG mean code below 👇 <br>
         </div>
@@ -71,4 +75,28 @@
         loopCount: Infinity,
         startDelay: 500,
     });
+
+    var event = setTimeout(resetTime,1000);
+
+    var date = new Date();
+    var day = ['Sunday' , 'Monday' , 'Tuesday' , 'Wednesday' , 'Thursday' , 'Friday' ,'Saturday']
+    document.getElementById("day").innerHTML = date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear();
+    document.getElementById("7-day").innerHTML = day[date.getDay()];
+    document.getElementById("time").innerHTML = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+    var hours = date.getHours();
+    if(hours>0 && hours<12){
+        document.getElementById("hello").innerHTML = 'Good morning. 🌞';
+    }else if(hours>12 && hours<18){
+        document.getElementById("hello").innerHTML = 'Good afternoon. ⛅';
+    } else {
+        document.getElementById("hello").innerHTML = 'Good evening. 🌙';
+    }
+
+    function resetTime(){
+        var date = new Date();
+        document.getElementById("day").innerHTML = date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear();
+        document.getElementById("7-day").innerHTML = day[date.getDay()];
+        document.getElementById("time").innerHTML = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();    
+        event = setTimeout(resetTime,1000); 
+    }
 </script>
