@@ -26,12 +26,12 @@
 }</span>
 
 <span class="let">console</span><span class="sf">.</span><span class="sf">log</span><span class="variable">(</span><span class="variable">myName</span><span class="variable">)</span>
-</pre> 
-    <div class="head-info-home">
-        📫 Contact me: <a href="mailto:">thanawat.k2000@gmail.com</a><br>
-        ⚡ Github: <a href="https://github.com/algnot" target="_blank">algnot</a> 
-        ⚡ Instagram: <a href="https://www.instagram.com/algnott/" target="_blank">algnott</a> 
-    </div>       
+</pre>
+        <div class="head-info-home">
+            📫 Contact me: <a href="mailto:">thanawat.k2000@gmail.com</a><br>
+            ⚡ Github: <a href="https://github.com/algnot" target="_blank">algnot</a> <br>
+            ⚡ Instagram: <a href="https://www.instagram.com/algnott/" target="_blank">algnott</a>
+        </div>
     </div>
 </div>
 
@@ -40,27 +40,39 @@
 
     <div class="home-container-grid">
         <div class="home-grid">
-            <i class="fas fa-bookmark text-muted"></i> &nbsp; <span class="home-link" onclick="load('#root','link/profile.html'); active('2');">Profile</span>
+            <i class="fas fa-bookmark text-muted"></i> &nbsp; <span class="home-link"
+                onclick="load('#root','link/profile.html'); active('2');">Profile</span>
             <div class="text-muted mt-2">Create by algnot</div>
-            <i class="fas fa-circle text-warning mt-3" style="font-size: 10px;"></i> <span class="text-muted">web-tech</span> &nbsp;&nbsp;<i class="far fa-star text-muted"></i> <span class="text-muted">99</span>
+            <i class="fas fa-circle text-warning mt-3" style="font-size: 10px;"></i> <span
+                class="text-muted">web-tech</span> &nbsp;&nbsp;<i class="far fa-star text-muted"></i> <span
+                class="text-muted">99</span>
         </div>
 
         <div class="home-grid">
-            <i class="fas fa-bookmark text-muted"></i> &nbsp; <span class="home-link" onclick="load('#root','link/education.html'); active('3');">Education</span>
+            <i class="fas fa-bookmark text-muted"></i> &nbsp; <span class="home-link"
+                onclick="load('#root','link/education.html'); active('3');">Education</span>
             <div class="text-muted mt-2">Create by algnot</div>
-            <i class="fas fa-circle text-warning mt-3" style="font-size: 10px;"></i> <span class="text-muted">web-tech</span> &nbsp;&nbsp;<i class="far fa-star text-muted"></i> <span class="text-muted">99</span>
+            <i class="fas fa-circle text-warning mt-3" style="font-size: 10px;"></i> <span
+                class="text-muted">web-tech</span> &nbsp;&nbsp;<i class="far fa-star text-muted"></i> <span
+                class="text-muted">99</span>
         </div>
 
         <div class="home-grid">
-            <i class="fas fa-bookmark text-muted"></i> &nbsp; <span class="home-link" onclick="load('#root','link/contact.html'); active('4');">Contact</span>
+            <i class="fas fa-bookmark text-muted"></i> &nbsp; <span class="home-link"
+                onclick="load('#root','link/contact.html'); active('4');">Contact</span>
             <div class="text-muted mt-2">Create by algnot</div>
-            <i class="fas fa-circle text-warning mt-3" style="font-size: 10px;"></i> <span class="text-muted">web-tech</span> &nbsp;&nbsp;<i class="far fa-star text-muted"></i> <span class="text-muted">99</span>
+            <i class="fas fa-circle text-warning mt-3" style="font-size: 10px;"></i> <span
+                class="text-muted">web-tech</span> &nbsp;&nbsp;<i class="far fa-star text-muted"></i> <span
+                class="text-muted">99</span>
         </div>
 
         <div class="home-grid">
-            <i class="fas fa-bookmark text-muted"></i> &nbsp; <span class="home-link" onclick="load('#root','link/artical.html'); active('5');">Article</span>
+            <i class="fas fa-bookmark text-muted"></i> &nbsp; <span class="home-link"
+                onclick="load('#root','link/artical.html'); active('5');">Article</span>
             <div class="text-muted mt-2">Create by algnot</div>
-            <i class="fas fa-circle text-warning mt-3" style="font-size: 10px;"></i> <span class="text-muted">web-tech</span> &nbsp;&nbsp;<i class="far fa-star text-muted"></i> <span class="text-muted">99</span>
+            <i class="fas fa-circle text-warning mt-3" style="font-size: 10px;"></i> <span
+                class="text-muted">web-tech</span> &nbsp;&nbsp;<i class="far fa-star text-muted"></i> <span
+                class="text-muted">99</span>
         </div>
 
     </div>
@@ -70,36 +82,16 @@
 <script src="script/typed.js"> </script>
 <script>
     var typed = new Typed('#name', {
-        strings: ['^500algnot^1000', '^500 Thanawat Talabtong^1000','^500Information Engeneer^1000','^500algnot^1000'],
+        strings: ['^500algnot^1000', '^500 Thanawat Talabtong^1000', '^500Information Engeneer^1000', '^500algnot^1000'],
         loop: true,
         loopCount: Infinity,
         startDelay: 500,
     });
 
     var date1 = new Date();
-    var day = ['Sunday' , 'Monday' , 'Tuesday' , 'Wednesday' , 'Thursday' , 'Friday' ,'Saturday']
+    var day = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
-    document.getElementById("day").innerHTML = date1.getDate()+"/"+(date1.getMonth()+1)+"/"+date1.getFullYear();
+    document.getElementById("day").innerHTML = date1.getDate() + "/" + (date1.getMonth() + 1) + "/" + date1.getFullYear();
     document.getElementById("7-day").innerHTML = day[date1.getDay()];
-    document.getElementById("time").innerHTML = date1.getHours()+":"+date1.getMinutes()+":"+date1.getSeconds();
-    // var day = ['Sunday' , 'Monday' , 'Tuesday' , 'Wednesday' , 'Thursday' , 'Friday' ,'Saturday']
-    // document.getElementById("day").innerHTML = date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear();
-    // document.getElementById("7-day").innerHTML = day[date.getDay()];
-    // document.getElementById("time").innerHTML = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
-    // var hours = date.getHours();
-    // if(hours>0 && hours<12){
-    //     document.getElementById("hello").innerHTML = 'Good morning. 🌞';
-    // }else if(hours>12 && hours<18){
-    //     document.getElementById("hello").innerHTML = 'Good afternoon. ⛅';
-    // } else {
-    //     document.getElementById("hello").innerHTML = 'Good evening. 🌙';
-    // }
-
-    // function resetTime(){
-    //     var date = new Date();
-    //     document.getElementById("day").innerHTML = date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear();
-    //     document.getElementById("7-day").innerHTML = day[date.getDay()];
-    //     document.getElementById("time").innerHTML = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();    
-    //     event = setTimeout(resetTime,1000); 
-    // }
+    document.getElementById("time").innerHTML = date1.getHours() + ":" + date1.getMinutes() + ":" + date1.getSeconds();
 </script>
