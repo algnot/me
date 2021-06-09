@@ -140,7 +140,7 @@ if(getCookie('page')==''){
 }
 
 if(getCookie('page')=='1'){
-  load('#root','link/home.html');
+  load('#root','link/home.html?ver=2');
   active('1');
 }
 
