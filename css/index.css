@@ -156,6 +156,13 @@
     display: grid;
     padding: 5px 0;
     grid-template-columns: 60px 1fr;
+    position: fixed;
+    right: 200px;
+    width: calc(100% - 620px);
+}
+
+.contant-profile{
+    padding-top: 59px;
 }
 
 .head-home{
@@ -405,6 +412,11 @@
         grid-template-columns: 1fr 1fr 1fr;
         gap: 10px;
     }
+
+    .head{
+        right: 100px;
+        width: calc(100% - 420px);
+    }
 }
 
 @media only screen and (max-width: 1000px){
@@ -413,11 +425,21 @@
         grid-template-columns: 1fr 1fr;
         gap: 10px;
     }
+
+    .head{
+        right: 20px;
+        width: calc(100% - 260px);
+    }
 }
 
 @media only screen and (max-width: 1200px){
     .container1{
         padding: 0 100px;
+    }
+
+    .head{
+        right: 0px;
+        width: calc(100% - 60px);
     }
 }
 
