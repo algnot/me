@@ -447,8 +447,8 @@ textarea:focus, input:focus{
     }
 
     .head{
-        right: 100px;
-        width: calc(100% - 420px);
+        right: 200px;
+        width: calc(100% - 620px);
     }
 }
 
@@ -471,8 +471,8 @@ textarea:focus, input:focus{
     }
 
     .head{
-        right: 0px;
-        width: calc(100% - 60px);
+        right: 100px;
+        width: calc(100% - 420px);
     }
 }
 
@@ -487,6 +487,11 @@ textarea:focus, input:focus{
 
     .email{
         display: none;
+    }
+
+    .head{
+        right: 20px;
+        width: calc(100% - 260px);
     }
 }
 
@@ -614,5 +619,10 @@ textarea:focus, input:focus{
 
     .home-grid{
         font-size: 15px;
+    }
+
+    .head{
+        right: 0px;
+        width: calc(100% - 60px);
     }
 }
