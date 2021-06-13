@@ -1,6 +1,6 @@
 body{
     background-color: #ffffff;
-}
+} 
 
 .link{ 
     color: #0F1419;
@@ -216,4 +216,20 @@ body{
 
 .hello{
     color: #d73a49; 
+}
+
+
+input{
+    background-color: #ebebeb;
+    color: #0d1822;
+}
+
+textarea{
+    background-color: #ebebeb;
+    color: #0d1822;
+}
+
+.button div{
+    background-color: #0d1822;
+    color: #fff;
 }

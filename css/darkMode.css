@@ -222,3 +222,18 @@ body{
     color: #E69C1C; 
 }
 
+input{
+    background-color: #0d1822;
+    color: #D9D9D9;
+}
+
+textarea{
+    background-color: #0d1822;
+    color: #D9D9D9;
+}
+
+.button div{
+    color: #0d1822;
+    background-color: #D9D9D9;
+}
+

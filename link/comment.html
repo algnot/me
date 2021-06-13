@@ -1,0 +1,64 @@
+<div class="head-home">
+    <div class="heag-home-topic">
+        <b>Contact</b>
+    </div>
+</div>
+
+<div class="post">
+    <div class="pined text-muted"><i class="fas fa-thumbtack"></i> Preview</div>
+    <div class="information-post">
+        <div class="img-post"><img src="img/profile.png" width="50" alt="image-post"></div>
+        <div class="post-text">
+            <div class="post-name"><span id="pname"></span></div>
+            <div class="text-muted"><span id="pemail"></span></div>
+        </div>
+    </div>
+    <div class="post-info">
+        <pre><span id="pmsg"></span></pre>
+    </div>
+</div>
+
+<div class="container-home">
+    <div class="home-head">
+        <div class="head-info-home" style="margin-top: 0;">
+            <i class="fas fa-paw"></i> Thank you for watching 👋 <br>
+            You can contact me via the box below. 👇 <br>
+        </div>
+
+        <div class="form">
+            <div class="form-2">
+                <input id="iname" type="text" placeholder="Name" required>
+                <input id="iemail" type="email" placeholder="Email" required>
+            </div>
+            <div class="form-1">
+                <textarea id="imsg" rows="5" placeholder="Your massage" required></textarea>
+            </div>
+            <div class="button">
+                <div>MESSAGE ME</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    setInterval(preview,300)
+    function preview(){
+        if(document.getElementById('iname').value)
+            document.getElementById('pname').innerHTML = document.getElementById('iname').value
+        else 
+            document.getElementById('pname').innerHTML = '<span class="text-muted">Enter you name<span>'
+        
+        if(document.getElementById('iemail').value)
+            document.getElementById('pemail').innerHTML = document.getElementById('iemail').value
+        else 
+            document.getElementById('pemail').innerHTML = '<span class="text-muted">enter you email<span>'
+
+        if(document.getElementById('imsg').value)
+            document.getElementById('pmsg').innerHTML = document.getElementById('imsg').value
+        else 
+            document.getElementById('pmsg').innerHTML = '<span class="text-muted">enter you massage<span>'           
+    }
+</script>
+

@@ -67,6 +67,7 @@ function active(key){
   document.getElementById('3').classList.remove("active");
   document.getElementById('4').classList.remove("active");
   document.getElementById('5').classList.remove("active");
+  document.getElementById('6').classList.remove("active");
   document.getElementById(link).classList.add("active");
   setCookie('page',key,365);
 
@@ -86,6 +87,9 @@ function active(key){
       break;
     case '5':
       document.getElementById('title').innerHTML = 'algnot | Article';
+      break;
+    case '6':
+      document.getElementById('title').innerHTML = 'algnot | Contact me';
       break;
   }
 }
@@ -145,7 +149,7 @@ if(getCookie('page')==''){
 }
 
 if(getCookie('page')=='1'){
-  load('#root','link/home.html?ver=2');
+  load('#root','link/home.html');
   active('1');
 }
 
@@ -167,6 +171,11 @@ if(getCookie('page')=='4'){
 if(getCookie('page')=='5'){
   load('#root','link/artical.html');
   active('5');
+}
+
+if(getCookie('page')=='6'){
+  load('#root','link/comment.html');
+  active('6');
 }
 
 var event = setTimeout(resetTime,500);
