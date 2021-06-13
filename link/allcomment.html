@@ -5,29 +5,42 @@
 </div>
 
 
-<div class="post">
-    <div class="information-post">
-        <div class="img-post"><img src="img/profile.png" width="50" alt="image-post"></div>
-        <div class="post-text">
-            <div class="post-name">test1</div>
-            <div class="text-muted">test1</div>
-        </div>
-    </div>
-    <div class="post-info" style="margin-bottom: 20px;">
-        test1
-    </div>
-</div>
+<div id="loadpost"></div>
 
-<div class="post">
-    <div class="information-post">
-        <div class="img-post"><img src="img/profile.png" width="50" alt="image-post"></div>
-        <div class="post-text">
-            <div class="post-name">test1</div>
-            <div class="text-muted">test1</div>
-        </div>
-    </div>
-    <div class="post-info" style="margin-bottom: 20px;">
-        test1
-    </div>
-</div>
-
+<script>
+    fetch('https://portfolioooooooooo.herokuapp.com/getAll')
+    .then(response => response.text())
+    .then(data => {
+        if(JSON.parse(data).status == 'error'){
+            document.getElementById('loadpost').innerHTML = `<div class="post">
+                                                                <div class="information-post">
+                                                                    <div class="img-post"><img src="img/profile.png" width="50" alt="image-post"></div>
+                                                                    <div class="post-text">
+                                                                        <div class="post-name text-danger">error to load</div>
+                                                                        <div class="text-muted text-danger">error to load</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="post-info text-danger" style="margin-bottom: 20px;">
+                                                                    try again
+                                                                </div>
+                                                            </div>`
+        } else {
+            data = JSON.parse(data)
+            data.reverse()
+            data.map((data) => {
+                document.getElementById('loadpost').innerHTML += `<div class="post">
+                                                                <div class="information-post">
+                                                                    <div class="img-post"><img src="img/profile.png" width="50" alt="image-post"></div>
+                                                                    <div class="post-text">
+                                                                        <div class="post-name">`+data.name+`</div>
+                                                                        <div class="text-muted">`+data.email+`</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="post-info" style="margin-bottom: 20px;">
+                                                                    `+data.msg+`
+                                                                </div>
+                                                            </div>`
+            })
+        }
+    })
+</script>

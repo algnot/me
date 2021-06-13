@@ -5,7 +5,7 @@
 </div>
 
 <div class="post">
-    <div class="pined text-muted"><i class="fas fa-thumbtack"></i> Preview</div>
+    <div class="pined text-muted"><i class="fas fa-thumbtack"></i> Preview <span class="text-danger" id="danger"></span></div>
     <div class="information-post">
         <div class="img-post"><img src="img/profile.png" width="50" alt="image-post"></div>
         <div class="post-text">
@@ -16,6 +16,9 @@
     <div class="post-info" style="margin-bottom: 20px;">
         <span id="pmsg"></span>
     </div>
+    <center id="loaderr" style="display: none;">
+        <div class="spinner-grow text-success mb-4"></div>
+    </center>
 </div>
 
 <div class="container-home">
@@ -32,47 +35,22 @@
             </div>
             <div class="form-1">
                 <textarea id="imsg" rows="5" placeholder="Your massage" required></textarea>
+                <div class="text-danger" id="danger2"></div>
             </div>
             <div class="button">
-                <div>MESSAGE ME</div>
+                <div onclick="send()">MESSAGE ME</div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="post">
-    <div class="information-post">
-        <div class="img-post"><img src="img/profile.png" width="50" alt="image-post"></div>
-        <div class="post-text">
-            <div class="post-name">test1</div>
-            <div class="text-muted">test1</div>
-        </div>
-    </div>
-    <div class="post-info" style="margin-bottom: 20px;">
-        test1
-    </div>
-</div>
-
-<div class="post">
-    <div class="information-post">
-        <div class="img-post"><img src="img/profile.png" width="50" alt="image-post"></div>
-        <div class="post-text">
-            <div class="post-name">test1</div>
-            <div class="text-muted">test1</div>
-        </div>
-    </div>
-    <div class="post-info" style="margin-bottom: 20px;">
-        test1
-    </div>
-</div>
+<div id="loadpost"></div>
 
 <div class="post" style="margin-bottom: 50px; padding: 20px 0;">
     <div class="post-info text-center" style="margin-top: 0;">
         <div class="read-more" onclick="load('#root','link/allcomment.html'); active('6');" >view more massage</div>
     </div>
 </div>
-
-
 
 <script>
     setInterval(preview,300)
@@ -92,5 +70,104 @@
         else 
             document.getElementById('pmsg').innerHTML = '<span class="text-muted">enter you massage<span>'           
     }
+
+    function send(){
+        let name = document.getElementById('iname').value
+        let email = document.getElementById('iemail').value
+        let msg = document.getElementById('imsg').value
+
+        if(!name){
+            document.getElementById('danger2').innerHTML = 'Enter your name!'
+            return document.getElementById('danger').innerHTML = 'Enter your name!'
+        }
+
+        if(!email){
+            document.getElementById('danger2').innerHTML = 'Enter your email!' 
+            return document.getElementById('danger').innerHTML = 'Enter your email!' 
+        }
+
+        if(!msg){
+            document.getElementById('danger2').innerHTML = 'Enter your massage!'
+            return document.getElementById('danger').innerHTML = 'Enter your massage!' 
+        }
+
+        if(!validateEmail(email)){
+            document.getElementById('danger2').innerHTML = 'Your email went wrong!' 
+            return document.getElementById('danger').innerHTML = 'Your email went wrong!' 
+        }
+
+        document.getElementById('loaderr').style.display = 'block'
+   
+        fetch('https://portfolioooooooooo.herokuapp.com/send', {
+            method: 'post',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                "name": name,
+                "email": email,
+                "msg": msg
+            })
+        })
+        .then(response => response.text())
+        .then(data => {
+            if(data.status == 'error') {
+                document.getElementById('danger2').innerHTML = 'Error to send massage, you can try again later.' 
+                document.getElementById('loaderr').style.display = 'none'
+                return document.getElementById('danger').innerHTML = 'Error to send massage, you can try again later.' 
+            } else {
+                document.getElementById('iname').value = ''
+                document.getElementById('iemail').value = ''
+                document.getElementById('imsg').value = ''
+                document.getElementById('danger2').innerHTML = '<span class="text-success">Send success!</span>' 
+                document.getElementById('loaderr').style.display = 'none'
+                load('#root','link/comment.html')
+                active('6')
+                return document.getElementById('danger').innerHTML = '<span class="text-success">Send success!</span>' 
+            }
+        })
+    }
+
+    function validateEmail(email) {
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+    fetch('https://portfolioooooooooo.herokuapp.com/getAll')
+    .then(response => response.text())
+    .then(data => {
+        if(JSON.parse(data).status == 'error'){
+            document.getElementById('loadpost').innerHTML = `<div class="post">
+                                                                <div class="information-post">
+                                                                    <div class="img-post"><img src="img/profile.png" width="50" alt="image-post"></div>
+                                                                    <div class="post-text">
+                                                                        <div class="post-name text-danger">error to load</div>
+                                                                        <div class="text-muted text-danger">error to load</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="post-info text-danger" style="margin-bottom: 20px;">
+                                                                    try again
+                                                                </div>
+                                                            </div>`
+        } else {
+            data = JSON.parse(data)
+            data.reverse()
+            var count = 0;
+            data.map((data) => {
+                if(count<5)
+                document.getElementById('loadpost').innerHTML += `<div class="post">
+                                                                <div class="information-post">
+                                                                    <div class="img-post"><img src="img/profile.png" width="50" alt="image-post"></div>
+                                                                    <div class="post-text">
+                                                                        <div class="post-name">`+data.name+`</div>
+                                                                        <div class="text-muted">`+data.email+`</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="post-info" style="margin-bottom: 20px;">
+                                                                    `+data.msg+`
+                                                                </div>
+                                                            </div>`
+                count++
+            })
+        }
+    })
 </script>
 

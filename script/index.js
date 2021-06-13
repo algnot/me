@@ -143,8 +143,9 @@ if(getCookie('mode')=='light'){
   changMode();
 }
 
-load('#root','link/home.html');
+
 if(getCookie('page')==''){
+  load('#root','link/home.html');
   setCookie('page','1',365);
 }
 
