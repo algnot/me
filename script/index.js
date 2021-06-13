@@ -130,7 +130,7 @@ document.getElementById("date2").innerHTML += d.getDate()+"/"+(d.getMonth()+1)+"
 document.getElementById("date3").innerHTML += d.getDate()+"/"+(d.getMonth()+1)+"/"+d.getFullYear();
 
 if(getCookie('mode')==''){
-  setCookie('mode','light',365);
+  setCookie('mode','dark',365);
 }  
 
 if(getCookie('mode')=='dark'){
