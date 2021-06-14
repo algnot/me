@@ -516,11 +516,17 @@ textarea:focus, input:focus{
     }
 
     .navigation{
-        width: 60px;
+        width: 100vw;
+        height: 60px;
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        position: fixed;
+        bottom: 0;
     } 
 
     #root{
-        margin-left: 60px;
+        margin-left: 0px;
+        margin-bottom: 80px;
     }
 
     .logo{
@@ -529,6 +535,7 @@ textarea:focus, input:focus{
     }
 
     .link{
+        height: fit-content;
         text-align: center;
     }
 
@@ -550,6 +557,7 @@ textarea:focus, input:focus{
     .profile{
         padding: 0px;
         left: 0;
+        display: none;
     }
 
     .profile:hover{
@@ -623,6 +631,10 @@ textarea:focus, input:focus{
 
     .head{
         right: 0px;
-        width: calc(100% - 60px);
+        width: 100%;
+    }
+
+    .mobile-hide{
+        display: none;
     }
 }
