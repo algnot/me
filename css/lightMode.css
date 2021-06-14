@@ -234,6 +234,9 @@ textarea{
     color: #fff;
 }
 
-.navigation{
-    background-color: #ffffff;
+
+@media only screen and (max-width: 700px){
+    .navigation{
+        background-color: #ffffff;
+    }
 }
