@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap');
 
 *{
     transition: all .3s ease;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins','Prompt', sans-serif;
     margin: 0;
     padding: 0; 
 } 
