@@ -152,6 +152,22 @@ if(getCookie('page')==''){
 if(getCookie('page')=='1'){
   load('#root','link/home.html');
   active('1');
+  
+  var event = setTimeout(resetTime,500);
+  var date = new Date();
+  var day = ['Sunday' , 'Monday' , 'Tuesday' , 'Wednesday' , 'Thursday' , 'Friday' ,'Saturday']
+  var hours = date.getHours();
+
+  if(hours>0 && hours<12){
+      document.getElementById("hello").innerHTML = 'Good morning. 🌞';
+  }else if(hours>12 && hours<18){
+      document.getElementById("hello").innerHTML = 'Good afternoon. ⛅';
+  } else {
+      document.getElementById("hello").innerHTML = 'Good evening. 🌙';
+  }
+  document.getElementById("day").innerHTML = date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear();
+  document.getElementById("7-day").innerHTML = day[date.getDay()];
+  document.getElementById("time").innerHTML = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
 }
 
 if(getCookie('page')=='2'){
@@ -177,25 +193,6 @@ if(getCookie('page')=='5'){
 if(getCookie('page')=='6'){
   load('#root','link/comment.html');
   active('6');
-}
-
-var event = setTimeout(resetTime,500);
-
-var date = new Date();
-var day = ['Sunday' , 'Monday' , 'Tuesday' , 'Wednesday' , 'Thursday' , 'Friday' ,'Saturday']
-
-document.getElementById("day").innerHTML = date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear();
-document.getElementById("7-day").innerHTML = day[date.getDay()];
-document.getElementById("time").innerHTML = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
-  
-var hours = date.getHours();
-
-if(hours>0 && hours<12){
-    document.getElementById("hello").innerHTML = 'Good morning. 🌞';
-}else if(hours>12 && hours<18){
-    document.getElementById("hello").innerHTML = 'Good afternoon. ⛅';
-} else {
-    document.getElementById("hello").innerHTML = 'Good evening. 🌙';
 }
 
 function resetTime(){
