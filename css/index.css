@@ -415,7 +415,7 @@
 input{
     padding: 10px;
     border: 1px solid transparent;
-    font-size: 16px;
+    font-size: 16px; 
 }
 
 textarea{
@@ -423,12 +423,12 @@ textarea{
     width: 100%;
     resize: none;
     border: 1px solid transparent;
-    font-size: 16px;
+    font-size: 16px; 
 }
 
 textarea:focus, input:focus{
     outline: none;
-    font-size: 16px;
+    font-size: 16px; 
 }
 
 .button{
