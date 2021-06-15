@@ -73,10 +73,14 @@ function active(key) {
   document.getElementById("4").classList.remove("active");
   document.getElementById("5").classList.remove("active");
   document.getElementById("6").classList.remove("active");
-  document.getElementById(link).classList.add("active");
+  if(key!=0)
+    document.getElementById(link).classList.add("active");
   setCookie("page", key, 365);
 
   switch (key) {
+    case "0":
+      document.getElementById("title").innerHTML = "algnot | Administrator";
+      break;
     case "1":
       document.getElementById("title").innerHTML = "algnot | Home";
       var event = setTimeout(resetTime, 500);
@@ -159,6 +163,12 @@ if (getCookie("mode") == "light") {
 if (getCookie("page") == "") {
   load("#root", "link/home.html");
   setCookie("page", "1", 365);
+}
+
+if (getCookie("page") == "0") {
+  load("#root", "link/login.html");
+  active("0");
+  setCookie("page", "0", 365);
 }
 
 if (getCookie("page") == "1") {

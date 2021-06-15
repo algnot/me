@@ -1,0 +1,65 @@
+<div class="head-home">
+    <div class="heag-home-topic">
+        <b>Admin</b>
+    </div>
+</div>
+
+<div class="post" style="margin-bottom: 0px; padding: 20px 0;">
+    <div class="post-info text-center" style="margin-top: 0;">
+        <div class="read-more" onclick="logout()" >logout</div>
+    </div>
+</div>
+
+<script>
+    if(getCookieLogin('username') && getCookieLogin('password')){
+        let username = getCookieLogin('username') 
+        let password = getCookieLogin('password')
+
+        fetch('https://portfolioooooooooo.herokuapp.com/login', {
+            method: 'post',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                username: username,
+                password: password
+            })
+        })
+            .then(response => response.text())
+            .then(data => {
+                data = JSON.parse(data)
+                if (data.status != password) {
+                    setCookieLogin('username', '', 0)
+                    setCookieLogin('password', '', 0)
+                }
+            })
+    } else {
+        logout()
+    }
+
+    function logout(){
+        setCookieLogin('username', '', 0)
+        setCookieLogin('password', '', 0)
+        load('#root','link/comment.html'); active('6');
+    }
+
+    function setCookieLogin(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    function getCookieLogin(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(";");
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == " ") {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+</script>
