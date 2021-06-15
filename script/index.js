@@ -203,7 +203,7 @@ if (getCookie("page") == "3") {
 }
 
 if (getCookie("page") == "4") {
-  load("#root", "link/contact.html");
+  load("#root", "link/skill.html");
   active("4");
 }
 
